@@ -21,8 +21,8 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="sye-w9-pWm">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="AnQ-It-D5f"/>
-                                    <constraint firstAttribute="height" constant="110" id="fui-bS-AN8"/>
+                                    <constraint firstAttribute="height" constant="80" id="KjH-Yn-dgb"/>
+                                    <constraint firstAttribute="width" constant="80" id="TW1-xf-D33"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miracle Pill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-zi-Ptz">
@@ -110,7 +110,16 @@
                                     <constraint firstAttribute="width" constant="125" id="raD-Af-Z7b"/>
                                 </constraints>
                                 <state key="normal" title="Choose your state"/>
+                                <connections>
+                                    <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRe-WW-xK7"/>
+                                </connections>
                             </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-oC-VfW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="K7C-9N-TjD"/>
+                                    <constraint firstAttribute="height" constant="168" id="lL5-rz-krl"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -127,6 +136,7 @@
                             <constraint firstItem="lnL-Fh-DH3" firstAttribute="top" secondItem="Ep0-zi-Ptz" secondAttribute="bottom" constant="8" id="Huo-7s-tPr"/>
                             <constraint firstItem="634-NN-uYF" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="Ipa-ci-ixS"/>
                             <constraint firstItem="hGx-Zd-nns" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="JO8-gj-dS0"/>
+                            <constraint firstItem="Thp-oC-VfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kg9-Gs-Pwv"/>
                             <constraint firstItem="fAB-IG-io0" firstAttribute="top" secondItem="M6g-vc-VGb" secondAttribute="bottom" constant="8" id="MGw-bA-tne"/>
                             <constraint firstItem="Ep0-zi-Ptz" firstAttribute="top" secondItem="sye-w9-pWm" secondAttribute="bottom" constant="8" id="N4H-hP-OJb"/>
                             <constraint firstItem="634-NN-uYF" firstAttribute="top" secondItem="amT-DT-dVP" secondAttribute="bottom" constant="16" id="OAH-PH-oXi"/>
@@ -135,13 +145,14 @@
                             <constraint firstItem="zUx-k6-j1F" firstAttribute="top" secondItem="L70-00-zyw" secondAttribute="bottom" constant="8" id="Swr-15-m5F"/>
                             <constraint firstItem="M6g-vc-VGb" firstAttribute="leading" secondItem="amT-DT-dVP" secondAttribute="leading" id="T7L-cc-eCp"/>
                             <constraint firstItem="amT-DT-dVP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="VkV-re-P8B"/>
+                            <constraint firstItem="sye-w9-pWm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="X9C-MR-gJ7"/>
                             <constraint firstItem="gu3-Lv-Gae" firstAttribute="top" secondItem="hGx-Zd-nns" secondAttribute="bottom" constant="8" id="Zzi-s8-kIW"/>
-                            <constraint firstItem="sye-w9-pWm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="cT0-cW-g42"/>
                             <constraint firstItem="zUx-k6-j1F" firstAttribute="leading" secondItem="L70-00-zyw" secondAttribute="leading" id="dkI-bo-iUZ"/>
                             <constraint firstItem="M6g-vc-VGb" firstAttribute="top" secondItem="634-NN-uYF" secondAttribute="bottom" constant="8" id="eux-fh-ADx"/>
                             <constraint firstItem="M6g-vc-VGb" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="g9o-WO-EA8"/>
                             <constraint firstItem="L70-00-zyw" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="gtP-Vc-1x5"/>
                             <constraint firstItem="hGx-Zd-nns" firstAttribute="leading" secondItem="amT-DT-dVP" secondAttribute="leading" id="n8r-GU-4ne"/>
+                            <constraint firstItem="Thp-oC-VfW" firstAttribute="top" secondItem="zUx-k6-j1F" secondAttribute="bottom" constant="8" id="nvp-WU-QWc"/>
                             <constraint firstItem="fAB-IG-io0" firstAttribute="leading" secondItem="amT-DT-dVP" secondAttribute="leading" id="nvp-xc-8lh"/>
                             <constraint firstItem="fAB-IG-io0" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="pYc-z7-Ujb"/>
                             <constraint firstItem="rsO-6p-TZ5" firstAttribute="leading" secondItem="amT-DT-dVP" secondAttribute="leading" id="tHp-Gs-DXr"/>
@@ -149,6 +160,10 @@
                             <constraint firstItem="gu3-Lv-Gae" firstAttribute="trailing" secondItem="amT-DT-dVP" secondAttribute="trailing" id="uDd-FF-XOo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stateButton" destination="zUx-k6-j1F" id="XLI-EW-A57"/>
+                        <outlet property="statePicker" destination="Thp-oC-VfW" id="w7h-IJ-Sjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
